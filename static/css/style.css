@@ -1,0 +1,142 @@
+
+
+/* General Page Styling */
+body {
+    background-image: url('https://wallpaperaccess.com/full/2119.jpg');
+    background-size:cover;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Heading - Cinematic Glow */
+.heading {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #00d8ff;
+    text-shadow: 0 0 15px rgba(0, 216, 255, 0.8), 0 0 25px rgba(0, 216, 255, 0.5);
+    letter-spacing: 2px;
+    animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 15px rgba(0, 216, 255, 0.8), 0 0 25px rgba(0, 216, 255, 0.5); }
+    50% { text-shadow: 0 0 25px rgba(0, 216, 255, 1), 0 0 45px rgba(0, 216, 255, 0.9); }
+}
+
+/* Search Bar Styling */
+.inputElement {
+    height: 45px;
+    width: 20%;
+    border-radius: 10px;
+    border: 2px solid #00ff99;
+    outline: none;
+    background: linear-gradient(to right, #99b0aa, #99f2c8);
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #000;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    margin-right: 20px;
+    margin-bottom: 25px;
+}
+
+.inputElement:focus {
+    box-shadow: 0 0 15px #00ff99;
+    transform: scale(1.05);
+}
+
+/* Recommend Button */
+.Recommendbtn {
+    height: 45px;
+    background: linear-gradient(135deg, #00ff99, #00d8ff);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.Recommendbtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 216, 255, 0.7);
+}
+
+.Recommendbtn:active {
+    transform: scale(0.95);
+}
+
+/* Numbered Recommendation List */
+.center-list {
+    list-style-position: inside; /* Keep numbers aligned inside */
+    counter-reset: movie-counter;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Numbered Movie Cards */
+.center-list li {
+    counter-increment: movie-counter;
+    background: linear-gradient(145deg, #111111, #1b1b1b);
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    font-size: 1.1rem;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    position: relative;
+}
+
+/* Keep the numbers styled */
+.center-list li::marker {
+    font-weight: bold;
+    color: #00ffcc;
+    font-size: 1.3rem;
+}
+
+/* Hover Effects */
+.center-list li:hover {
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.6);
+}
+.center-list li::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 153, 0.1), rgba(0, 216, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 10px;
+}
+.center-list li:hover::before {
+    opacity: 1;
+}
+
+
+/* Rating Styling */
+.center-list li span {
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+/* For Mobile Adjustments */
+@media (max-width: 768px) {
+    .inputElement {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .heading {
+        font-size: 2.2rem;
+    }
+}
