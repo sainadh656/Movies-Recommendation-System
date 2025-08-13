@@ -4,58 +4,88 @@ The goal of this project is to develop a web-based movie recommendation system w
 The app will be accessible online for free via a hosting platform such as Render or PythonAnywhere.
 
 2. Functional Requirements:
-  1.User Input
-      A form for the user to enter a movie title. 
+
+   1. User Input
+
+      A form for the user to enter a movie title.
+   
       A submit button to trigger recommendations.
 
-  2.Recommendation Engine
+   2. Recommendation Engine
+     
       Load movie dataset from a CSV file (e.g., movies.csv).
+     
       Use TF-IDF vectorization + cosine similarity to compute similarity between movies.
+     
       Display vote_average as ratings alongside each recommendation.
 
-  3.Result Display
-      Show a list of recommended movies in a table or card layout (Bootstrap styling).
-      Include movie title and rating.
+    3. Result Display
+
+       Show a list of recommended movies in a table or card layout (Bootstrap styling).
+     
+       Include movie title and rating.
     
-  4.Error Handling
-      If the entered movie does not exist, show a “Movie not found” message.
-      Handle empty input by prompting the user to enter a title.
+    4. Error Handling
+
+       If the entered movie does not exist, show a “Movie not found” message.
+     
+       Handle empty input by prompting the user to enter a title.
 
 3. Non-Functional Requirements:
-   1.Performance
-      Should return recommendations within 2 seconds for datasets up to ~10,000 movies.
 
-   2.Usability
-      Mobile-friendly design using Bootstrap.
+   1. Performance
+        Should return recommendations within 2 seconds for datasets up to ~10,000 movies.
 
-   3.Availability
-      Hosted online on a free platform, accessible via a public URL.
+   2. Usability
+        Mobile-friendly design using Bootstrap.
 
-4. Technology Stack:
+   3. Availability
+        Hosted online on a free platform, accessible via a public URL.
 
-    Backend: Python (Flask)
-    Frontend: HTML, CSS, Bootstrap
-    Data Handling: Pandas
-    Machine Learning: Scikit-learn (TF-IDF, cosine similarity)
+5. Technology Stack:
 
-5. Folder Structure
-   movie_recommender
-    app.py
-    requirements.txt
-    movies.csv
-    templates/
-      index.html
-    static/
-       style.css
-6. Installation Requirements:
+      **Backend** : Python (Flask)
+   
+      **Frontend** : HTML, CSS, Bootstrap
+   
+      **Data Handling** : Pandas
+   
+      **Machine Learning** : Scikit-learn (TF-IDF, cosine similarity)
+   
 
-   1.Install Python 3.x
-   2.Install dependencies
-      pip install flask pandas scikit-learn gunicorn
-   3.Have a CSV dataset (movies.csv) with columns like:
-      title, overview, vote_average
-7. Usage
-   python app.py
+7. Folder Structure
+
+    movie_recommender
+   
+   - app.py
+   
+   - requirements.txt
+   
+   - movies.csv
+   
+   - templates/
+   
+     -- index.html
+   
+   - static/
+   
+     -- style.css
+   
+9. Installation Requirements:
+
+   1. Install Python 3.x
+
+   2. Install dependencies
+
+     - pip install flask pandas scikit-learn gunicorn
+   
+   3. Have a CSV dataset (movies.csv) with columns like:
+    
+     - title, overview, vote_average
+  
+11. Usage
+
+    - python app.py
 
 
 
